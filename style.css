@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* all the elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+/* create variables to hold values */
+:root {
+    --hover: rgb(252, 227, 195);
+    --active: rgb(243, 208, 164);
+    --underline: rgb(218, 177, 123);
+    --norbc: #faebd7;
+    --fontc: rgb(242, 167, 74);
+}
+
+/* for the footer to make it move with content*/
+html {
+    height: 100%;
+}
+
+/* I used this overflow-x methord to hide any overflow on the whole website as the main overflow only occur on x axis  */
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.904);
+    cursor: url(./assests/cursor.svg) 16 16, auto;
+    box-sizing: inherit;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    /* padding-bottom: 6.74rem; */
+    /* display: flex; */
+
+
+}
+
+header>h2>a {
+    background-repeat: no-repeat;
+    display: inline;
+    padding: 10px;
+    border-radius: 16px;
+    color: black;
+    background: linear-gradient(180deg, white 40%, #ffe1bd);
+    text-decoration: none;
+    letter-spacing: 5px;
+    z-index: 20;
+}
+
+/* ************************************************************ */
+
+header {
+    /* font-weight: bolder; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    text-decoration: rgb(239, 196, 138) underline 5px;
+    background-color: var(--norbc);
+    z-index: 10;
+    position: relative;
+    /* font-size: larger; */
+}
+
+header>h2>a {
+    transition: 0.6s ease;
+}
+
+header>h2>a:hover {
+    text-shadow: 0px 0px 8px rgb(242, 201, 148);
+    color: white;
+}
+
+/* for hamburger menu move in and out */
+#menud {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    display: none;
+}
+
+.menumove {
+    transform: translateX(0px);
+}
+
+.menuremove {
+    transform: translate(-650px);
+}
+
+.tempremove {
+    transform: translate(0px);
+}
+
+#menu {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    width: 30px;
+    height: 30px;
+    /* background-color: #fff; */
+    cursor: pointer;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menuig {
+    height: 24px;
+    width: 24px;
+    transition: all 0.6s ease;
+}
+
+#menuig:hover {
+    filter: drop-shadow(0px 0px 3px rgb(7, 7, 7));
+}
+
+/* ********************************************************************** */
+
+
+
+/* for nav bar */
+nav {
+    /* display: none; */
+    /*text-align: center; */
+    /* position: fixed; */
+    /* border: 2px solid; */
+    /* width: 100%; */
+    /* background-color: var(--norbc); */
+    /* flex-wrap: wrap; */
+    /* border: 1px solid; */
+    /* overflow: auto; */
+    /* height: 100%; */
+    /* border: 4px solid antiquewhite; */
+    margin: 0;
+    background-image: linear-gradient(antiquewhite 40%, rgb(247, 206, 152), antiquewhite);
+    float: left;
+    z-index: 1;
+    clear: both;
+    padding: 0px;
+    display: block;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+
+nav>ul {
+    /* border: 1px solid; */
+    /* width: 100%; */
+    /* height: 100%; */
+    /* border: 2px solid ; */
+    display: flex;
+    margin-top: 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav>ul>li {
+    list-style: none;
+    margin: 10px;
+}
+
+nav>ul>li>a {
+    padding: 10px 25px;
+    transition: all 0.6s ease;
+
+}
+
+.nv {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav>ul>li>a:hover {
+    font-size: larger;
+    font-weight: bolder;
+    background-color: var(--hover);
+    text-decoration: var(--underline) underline 3px;
+    /* text-shadow: 0px 0px 10px rgb(255, 145, 0); */
+
+}
+
+/* *********************************************************** */
+
+main {
+    margin: 10px 30px 100px 170px;
+    /* padding-bottom: 80px; */
+    /* display: flex;
+    flex-direction: column; */
+    /* min-height: 72vh; */
+    padding-left: 50px;
+}
+
+/* for the img on hero page */
+.herod {
+    display: flex;
+    justify-content: center;
+}
+
+.heroig {
+    width: 100%;
+    height: 655px;
+    /* margin: 15px;
+    border-radius: 15px; */
+}
+
+/* for video on the index page */
+#pv {
+    width: 320px;
+    height: 240px;
+    border-radius: 15px;
+    float: right;
+    clear: both;
+    margin: 2px 3px 10px;
+    /* z-index: 100;
+    position: relative; */
+    /* top: 70%;
+    right: 2%;
+    position: absolute; */
+
+}
+
+/* animation */
+header>h2 {
+    transform: translateY(-100px);
+    animation: slidein 1s ease forwards;
+}
+
+@keyframes slidein {
+    0% {
+        transform: translateY(-100px);
+        /* rotate: -10deg; */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* rotate: 0; */
+    }
+}
+
+.shopc {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.scard {
+    font-size: smaller;
+    padding: 5px;
+    width: 250px;
+    height: 450px;
+    border: 4px solid var(--active);
+    background-color: var(--norbc);
+    border-radius: 15px;
+    margin: 10px 5px;
+    transition: all 0.6s ease;
+}
+.scard>h3{
+    text-decoration: none;
+}
+
+.scard>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookimg{
+    height: 200px;
+    width: 230px;
+}
+.scard>div>input {
+    padding: 0 5px;
+    /* margin-left: 65px; */
+    /* padding: 8px; */
+    border-radius: 25px;
+    background-color: var(--norbc);
+    font-weight: bold;
+    border: 3px solid var(--active);
+    transition: all 0.6s ease;
+}
+
+.scard>div>input:hover {
+    box-shadow: 0px 0px 13px var(--underline);
+}
+
+.scard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px black;
+}
+
+/* add padding to make space */
+div>h2,
+p,
+ul {
+    padding-bottom: 10px;
+}
+
+/* for the underline on home page */
+div>h2 {
+    text-decoration: underline;
+}
+
+/* for first ul list ont the home page */
+div>ul:first-child {
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+
+/* for the second ul list on the home page */
+div>ul:last-child>.det {
+    list-style: none;
+}
+
+/* on the home page */
+.sdet {
+    margin-top: 20px;
+}
+
+/* for every h2 on pages */
+main>h2 {
+    text-decoration: underline;
+}
+
+/* added validation logo on home page */
+.vlogo {
+    position: absolute;
+    bottom: 80px;
+    right: 5px;
+    z-index: 20;
+}
+
+/* info on yurts page */
+.purh {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.yurp {
+    margin: 5px 0 10px 10px;
+}
+
+/* for the table */
+
+.stable {
+    border-radius: 16px;
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+    border: 2px solid;
+    width: 100%;
+    overflow: hidden;
+}
+
+.stable>table {
+    border-collapse: collapse;
+    /* overflow: hidden; */
+    width: 100%;
+}
+
+.stable>table tr:first-child {
+    background-color: var(--active);
+}
+
+
+.stable>table>th,
+td {
+    text-align: center;
+    /* border: 1px solid; */
+
+}
+
+
+
+.stable>table th:first-child {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+
+
+}
+
+.stable>table th:nth-child(2) {
+    border-radius: 0;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+
+
+}
+
+.stable>table th:nth-child(3) {
+    border-radius: 0;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+
+
+}
+
+.stable>table th:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    /* border-right: 2px solid; */
+    border-bottom: 2px solid;
+
+
+}
+
+.stable>table td {
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.stable>table td:last-child {
+    border-right: none;
+    border-bottom: 2px solid;
+}
+
+.stable>table tr:last-child td {
+
+    /* border-right: 2px solid; */
+    border-bottom: none;
+}
+
+.stableh:nth-child(odd) {
+    background-color: var(--norbc);
+}
+
+.stable>table .stableh {
+    transition: all 0.6s ease;
+}
+
+.stable>table .stableh:hover {
+    background-color: var(--hover);
+
+}
+
+/* container use to contain section  */
+.concard {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.card {
+    width: 360px;
+    border: 4px solid var(--active);
+    background-color: var(--norbc);
+    border-radius: 16px;
+    padding: 5px;
+    transition: all 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px black;
+}
+
+/* for list on activities */
+.listsec {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.listsec>li {
+    font-weight: bold;
+}
+
+/* for number */
+#mobile {
+    display: none;
+}
+
+#mobile>a {
+    color: rgb(243, 171, 78);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* I used background img to give images a moving sort of effect */
+#ig {
+    background-image: url(./assests/images/Yurts.webp);
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    overflow: hidden;
+}
+
+#yut {
+    color: rgba(255, 255, 255, 0.392);
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 250px;
+    font-weight: bolder;
+    transform: translateY(400px);
+    transition: all 0.6s ease;
+}
+
+.igall {
+    /* border: 5px solid rgb(242, 167, 74); */
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+    margin: 5px;
+}
+
+.ighw {
+    height: 220px;
+    width: 350px;
+}
+
+.iga {
+    filter: grayscale(1);
+    overflow: hidden;
+}
+
+.iga:hover {
+    box-shadow: 0px 0px 13px black;
+    background-position: center;
+    filter: grayscale(0);
+}
+
+.iga:hover #yut {
+    transform: translateY(90px);
+    /* text-shadow: 0px 0px 1px black; */
+}
+
+.iga:hover .itext {
+    transform: translateY(190px);
+    padding-left: 10px;
+
+}
+
+.itext {
+    transform: translateY(220px);
+    font-weight: bold;
+    color: white;
+    transition: all 0.8s ease;
+}
+
+#a1 {
+    background-image: url(./assests/images/sandcastle.webp);
+}
+
+#a2 {
+    background-image: url(./assests/images/volleyball.webp);
+}
+
+#a3 {
+    background-image: url(./assests/images/treasure-map.webp);
+}
+
+#a4 {
+    background-image: url(./assests/images/surfing.webp);
+}
+
+#a5 {
+    background-image: url(./assests/images/dance.webp);
+}
+
+#a6 {
+    background-image: url(./assests/images/kayak.webp);
+}
+
+#a7 {
+    background-image: url(./assests/images/bird.webp);
+}
+
+/* ************************************************************* */
+/* on activities*/
+div>h3 {
+    text-decoration: underline 1.8px double;
+    padding: 5px 0 7px;
+    font-size: larger;
+}
+
+.listsec {
+    padding-left: 15px;
+}
+
+/* reservation form */
+.ptable>table,
+th,
+td {
+    /* border: 3px solid black ; */
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.ptable>table,
+th {
+    border-radius: 15px;
+    background-color: #e5c39846;
+
+}
+
+/* .ptable>table td{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+} */
+
+.ptable {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+.ptable>th {
+    background-color: var(--active);
+}
+
+label {
+    padding: 8px;
+}
+
+#btn {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#submit-btn {
+    padding: 8px;
+    border-radius: 25px;
+    background-color: var(--norbc);
+    font-weight: bold;
+    border: 3px solid var(--active);
+}
+
+input {
+    height: 30px;
+}
+
+input,
+option,
+select,
+textarea {
+    background-color: var(--norbc);
+    accent-color: var(--norbc);
+    border-radius: 15px;
+    border: 2px solid var(--active);
+    /* text-align: center; */
+    padding-left: 10px;
+
+}
+
+option,
+select,
+input,
+textarea {
+    cursor: pointer;
+}
+
+/* input, textarea{
+    width: 80%;
+} */
+label {
+    padding-right: 60px;
+    /* font-weight: bold; */
+}
+
+#email {
+    margin-left: 43px;
+}
+
+#phone {
+    margin-left: -30px;
+}
+
+/* use to limit the width*/
+#nights {
+    width: 100px;
+    /* margin-left: 50px; */
+}
+
+button {
+    transition: 0.6s ease;
+    width: 90px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0px 0px 13px var(--hover);
+}
+
+
+/* on about page */
+h1 {
+    text-decoration: underline;
+}
+
+/* ul on about page */
+#attri {
+    border: 5px solid var(--active);
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 10px 0;
+}
+
+#attri>.at>a {
+    display: block;
+    color: black;
+    font-weight: 550;
+    text-decoration: none;
+}
+
+.at {
+    transition: all 0.5s ease;
+}
+
+.at:hover {
+    text-decoration: underline 2px var(--underline);
+}
+
+/* #attri>.at>a:visited{
+    color: antiquewhite;
+} */
+
+/* Footer css */
+footer {
+    background-color: antiquewhite;
+    /* margin: 0; */
+    padding: 10px 0 10px;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+    /* margin-left: 90px; */
+}
+
+footer>p {
+    font-weight: bold;
+    /* border: 1px solid; */
+    padding: 0;
+}
+
+footer>a {
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 5px;
+    color: rgb(242, 167, 74);
+    /* border: 1px solid; */
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--active);
+    /* border-radius: 5px; */
+    min-height: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--underline);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--norbc);
+}
+
+/* make it responsive for different screen size */
+@media only screen and (max-width: 669px) {
+    input {
+        width: 80%;
+    }
+
+    #phone,
+    #email {
+        margin-left: 0;
+    }
+
+}
+
+@media only screen and (max-width:650px) {
+    .tempremove {
+        transform: translateX(-650px);
+    }
+
+    #menud {
+        display: block;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+        /* I have used block instant for inline because inline make it stick up with other info  */
+    }
+
+    .stable {
+        font-size: 13px;
+    }
+
+    header>h2>a {
+        letter-spacing: 0px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    nav>ul>li>a {
+        padding: 10px 8px;
+    }
+
+    img {
+        height: 230px;
+        width: 370px;
+    }
+
+    #ig {
+        width: 300px;
+    }
+
+    #ig>#yut {
+        font-size: 90px;
+    }
+
+    .ighw {
+        width: 330px;
+    }
+
+    .heroig {
+        height: 280px;
+    }
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
+    option,
+    #phone,
+    #email {
+        margin-left: 0;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .ighw {
+        width: 310px;
+    }
+
+    option,
+    #phone,
+    #email {
+        margin-left: 0;
+    }
+
+    #lemail {
+        padding-right: 85px;
+    }
+}
+
+@media only screen and (max-width:376px) {
+    nav>ul {
+        flex-wrap: wrap;
+        /* height: 100px; */
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    #ig {
+        width: 270px;
+    }
+}

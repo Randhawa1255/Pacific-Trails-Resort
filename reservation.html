@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Trails Resort : Reservation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./assests/favicon.ico">
+    <style>
+        #nv4 {
+            background-color: rgb(243, 208, 164);
+            display: block;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2><a href="index.html">Pacific Trails Resort</a></h2>
+        <div id="menud"><button id="menu"><img id="menuig" src="./assests/hamburger.svg" alt="menu"></button></div>
+    </header>
+    <nav class=" menuremove tempremove">
+        <ul>
+            <li><a href="index.html" class="nv" id="nv1">Home</a></li>
+            <li><a href="yurts.html" class="nv" id="nv2">Yurts</a></li>
+            <li><a href="activites.html" class="nv" id="nv3">Activities</a></li>
+            <li><a href="reservation.html" class="nv" id="nv4">Reservation</a></li>
+            <li><a href="shop.html" class="nv" id="nv6">Shop</a></li>
+            <li><a class="nv" id="nv5" href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <div class="herod"><img class="heroig" src="./assests/images/Makawehi_Bluff.webp" alt="Makawehi_Bluff"></div>
+    <main>
+        <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+            <div class="ptable">
+                <table>
+                    <tr>
+                        <th>Personal Details</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="firstname">First Name:</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Enter Your First Name"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Enter Your Last Name"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email" id="ptlemail">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter Your Number"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mydate">Arrival Date:</label>
+                            <input type="date" id="mydate" name="mydate">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="room-type">Room Type:</label>
+                            <select id="room-type" name="room-type" required>
+                                <option value="" disabled selected hidden>Room Type</option>
+                                <option value="single">Single Room</option>
+                                <option value="double">Double Room</option>
+                                <option value="suite">Suite</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nights">Nights:</label>
+                            <input type="number" id="nights" name="nights" min="1" max="14">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mycomment">Comment:</label>
+                            <textarea rows="2" cols="20" name="mycomment" id="mycomment" required></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Submit Button -->
+            <div id="btn">
+                <button type="submit" id="submit-btn">Submit</button>
+            </div>
+        </form>
+
+    </main>
+    <footer>
+        <p><small><em>Copyright &copy; 2025 Pacific Trails Resort</em></small></p>
+        <a href="mailto:temp@gmail.com">PTS@gmail.com</a>
+    </footer>
+    <!-- <script>
+        document.getElementById("submit-btn").addEventListener("click", () => alert("Under Work. We are very sorry"))
+
+    </script> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
