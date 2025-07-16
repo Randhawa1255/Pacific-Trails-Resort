@@ -10,7 +10,3 @@ This is a basic HTML and CSS website for a fictional resort called Pacific Trail
 - Reservation details
 - External CSS for styling
 - Images for visual design
-
-## Notes
-
-This project is for educational purposes only.
